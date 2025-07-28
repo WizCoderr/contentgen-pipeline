@@ -1,0 +1,7 @@
+fastapi 
+openai
+moviepy 
+gtts
+uvicorn
+reportlab
+python-multipart
