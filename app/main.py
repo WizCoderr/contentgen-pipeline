@@ -9,6 +9,7 @@ async def root():
 
 @app.post("/generate")
 async def generate_content(text_input: str = Form(...), image: UploadFile = None):
+    prompt = f"Act like a proffesional markiting expert: {text_input}"
     structured_prompt = generate_response(text_input)
     return {"prompt": structured_prompt}
 

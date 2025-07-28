@@ -23,7 +23,7 @@ def generate_response(prompt: str) -> str:
         inputs = tokenizer(prompt, return_tensors="pt").to(device)
         outputs = model.generate(
             **inputs,
-            max_new_tokens=500,
+            max_length=512,
             do_sample=False
         )
         generated_text = tokenizer.decode(
